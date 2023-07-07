@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>new post</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-image:url('https://images.unsplash.com/photo-1589497836818-9ad2fa1df1a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwxMzYwOTV8fGVufDB8fHx8fA%3D%3D&w=1000&q=80');
+            margin: 0;
+            background-repeat:no-repeat;
+            padding: 20px;
+            background-size:cover;
+         }
+
+         h1 {
+            color: white;
+            margin-left:500px;
+            text-decoration:underline yellow;
+         }
+
+         form {
+            background-color: #fff;
+            opacity:0.3;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+
+         label {
+            font-weight: bold;
+            color:red;
+         }
+
+         input[type="text"],
+         textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+         }
+       button:hover{
+              color:red;
+
+                }
+
+                 .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .navbar a:hover {
+      background-color: green;
+      color: black;
+
+    }
+button{
+background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin-top:20px;
+  border-radius:5px;
+}
+.aaa{
+    color:white;
+    background-color:gray;
+
+
+}
+      </style>
+   </head>
+   <body>
+      <h1>NEW POST</h1>
+         <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="/homeview">Home</a>
+    <a href="#about">New Post</a>
+    <a href="#services">About</a>
+  </div>
+
+
+
+
+      <form action="/addpost/" method="post">
+    {% csrf_token %}
+         <label for="title">Title:</label>
+         <br>
+         <input type="text"  class= "aaa" id="title" name="title">
+         <br>
+         <br>
+         <label for="description">Description:</label>
+         <br>
+         <textarea  class = "aaa" id="description" name="description" rows="4" cols="50" >                                        "></textarea>
+         <br>
+         <br>
+
+
+     <button type="submit">submit</button>
+          </form>
+   </body>
+</html>
